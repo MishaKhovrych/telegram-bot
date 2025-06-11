@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram Bot "Пока все ждут отката"
+After=network.target
+
+[Service]
+User=<your_username>
+WorkingDirectory=/path/to/telegram-bot
+ExecStart=/usr/bin/python3 bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
